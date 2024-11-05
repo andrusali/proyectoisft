@@ -19,11 +19,10 @@ $tarea = $result->fetch_assoc();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = $_POST['titulo'];
     $descripcion = $_POST['descripcion'];
-    $fecha_limite = $_POST['fecha_limite'];
-    $materia = $_POST['materia'];
+    $fecha = $_POST['fecha'];
     $prioridad = $_POST['prioridad'];
 
-    $sql = "UPDATE tareas SET titulo='$titulo', descripcion='$descripcion', fecha_limite='$fecha_limite', materia='$materia', prioridad='$prioridad' WHERE id=$id";
+    $sql = "UPDATE tareas SET titulo='$titulo', descripcion='$descripcion', fecha='$fecha', prioridad='$prioridad' WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php");
@@ -46,8 +45,7 @@ $conn->close();
     <form method="POST">
         <input type="text" name="titulo" value="<?php echo $tarea['titulo']; ?>" required>
         <textarea name="descripcion" required><?php echo $tarea['descripcion']; ?></textarea>
-        <input type="date" name="fecha_limite" value="<?php echo $tarea['fecha_limite']; ?>" required>
-        <input type="text" name="materia" value="<?php echo $tarea['materia']; ?>">
+        <input type="date" name="fecha" value="<?php echo $tarea['fecha']; ?>" required>
         <select name="prioridad">
             <option value="alta" <?php echo $tarea['prioridad'] == 'alta' ? 'selected' : ''; ?>>Alta</option>
             <option value="media" <?php echo $tarea['prioridad'] == 'media' ? 'selected' : ''; ?>>Media</option>
