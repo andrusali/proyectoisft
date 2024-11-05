@@ -1,0 +1,87 @@
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f2f7f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Título principal */
+h1 {
+    color: #ff6b6b;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Estilos para el formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+.form-control {
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+/* Estilos para los botones */
+.btn-primary {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+}
+
+/* Estilos para las tarjetas de tareas */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilos para las alertas */
+.alert {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
